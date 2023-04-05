@@ -1,36 +1,10 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
-
-  <h3><b>Microverse README Template</b></h3>
 
 </div>
 
@@ -60,11 +34,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Book App <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+
+**Book App** is a Ruby on Rails web-based platform that allows book lovers to discover new books, post, and comment on book. The application offers a variety of features to help users find and review books, as well as socialize with other readers.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -73,16 +47,9 @@ After you're finished please remove all the comments and instructions!
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">Ruby</a></li>
   </ul>
 </details>
 
@@ -97,11 +64,12 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- User Profile: Users have a personal profile page where they can view their reviews, edit their account details, and see their activity on the application.
+
+- Book Search: Users can search for books by title or author. The application integrates with the Google Books API to fetch data about books, including their cover image, title, author, and description.
+
+- Book Details: Users can view the details of a book, including its cover image, title, author, and description. They can also see other users' reviews for the book.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,59 +87,68 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+📘 📗 📕 📙
 
-In order to run this project you need:
+Before installing this application, you need to have the following software installed on your machine:
 
-<!--
-Example command:
+- Ruby 2.6.3 or higher
+- Rails 6.0.0 or higher
+- PostgreSQL
 
-```sh
- gem install rails
-```
- -->
-
-### Setup
-
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 ### Install
 
-Install this project with:
+To install this application, follow these steps:
 
-<!--
-Example command:
+1. Clone this repository to your local machine using the command
 
 ```sh
-  cd my-project
-  gem install
+git clone git@github.com:Ridwanullahi-code/BlogApp.git
+  
 ```
---->
+OR
+
+```sh
+git clone git https://github.com/Ridwanullahi-code/BlogApp.git
+  
+```
+2.  Navigate to the root directory of the application using the command 
+
+```sh
+cd BookApp
+```
+3.  Install the required gems by running the command 
+
+```sh
+ bundle install
+```
+4.  Create the database by running the command 
+
+```sh
+ rails db:create
+```
+
+5.  Migrate the database by running the command 
+
+```sh
+ rails db:migrate
+```
 
 ### Usage
 
-To run the project, execute the following command:
+To use this application, follow these steps:
 
-<!--
-Example command:
-
+1. Start the server by running the command 
 ```sh
   rails server
 ```
---->
+2. Open your web browser and navigate to
+```sh
+  http://localhost:3000
+```
 
 ### Run tests
 
@@ -203,31 +180,29 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+## **Author1**
 
-👤 **Author1**
+- Github: [Ridwan](https://github.com/Ridwanullahi-code)
+- LinkedIn: [Ridwan](https://www.linkedin.com/in/ajayi-ridwan/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 🚀 **About Me**
 
-👤 **Author2**
+I'm full stack software developer, Computer science, and Microverse student.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+**Stack:** Python, JavaScript, Bootstrap, Ruby, Rails, React, Redux. Available for hire!
+## 🤝 **Contributing**
+Contributions, issues, and feature requests are welcome!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+- Book Recommendations: The application can use machine learning algorithms to provide personalized book recommendations based on users' reading history and reviews.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- Book Clubs: Users can create and join book clubs, where they can discuss books with like-minded individuals and participate in virtual meetings.
+
+- Audio Books: The application can integrate with audio book providers such as Audible to offer users the option to listen to books in addition to reading them.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -235,9 +210,27 @@ Example:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
+- If you want to contribute to this project, please follow these steps:
+
+1.  Create a new branch with a descriptive name 
+```sh
+ git checkout -b my-new-feature
+```
+2. Make changes to the code and commit them
+```sh
+ git commit -am 'Add some feature'.
+```
+ 
+3.  Push your changes to your fork
+```sh
+ git push origin my-new-feature.
+```
+4. Create a new [pull request](https://github.com/Ridwanullahi-code/BlogApp/compare) and describe your changes.
+
+
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Ridwanullahi-code/BlogApp/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,19 +238,15 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
 If you like this project...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+-I would like to thank [Microverse](https://www.microverse.org/) for providing good material and well-detailed project requirements
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,15 +254,14 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **How do I search for books on the application?**
 
-  - [Answer_1]
+  - To search for books on the application, enter the title or author name in the search bar on the homepage or in the header of the application.
 
-- **[Question_2]**
+- **Can I leave a comment for a book?**
 
-  - [Answer_2]
+  - Yes, you can leave a review for a book by clicking on the "comment" button on the book details page. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -282,7 +270,5 @@ I would like to thank...
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
