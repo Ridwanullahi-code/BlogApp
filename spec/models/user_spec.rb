@@ -25,4 +25,7 @@ RSpec.describe User, type: :model do
       expect(subject.most_recent_posts).to eq(subject.posts.last(3))
     end
   end
+  describe 'associations' do
+    it { should have_many(:posts) }
+  end
 end

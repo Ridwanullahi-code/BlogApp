@@ -1,28 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  subject { User.new(name:	'Ridwan', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer', posts_counter: 5) }
-  before { subject.save }
+RSpec.describe Like, type: :model do
+  describe 'Like Model Test' do
+    subject { Like.new(author_id: 5, post_id: 5) }
+    before { subject.save }
 
-  describe 'validate the user model' do
-    it { should validate_presence_of(:name) }
-    it 'name must be present' do
-      expect(subject.name).to eq('Ridwan')
+    describe 'test like object' do
+      it 'should update likes_counter' do
+        expect(subject).to respond_to(:update_likes_counter)
+      end
     end
-    it 'test posts_counter to be instance of integer' do
-      expect(subject.posts_counter).to be_a(Integer)
-    end
-    it 'test posts_counter not to less than zero' do
-      expect(subject.posts_counter).not_to be(0)
-    end
-    it 'test post_counter value must be 5' do
-      expect(subject.posts_counter).to be(5)
-    end
-    it 'Raises a TypeError if posts_counter is not an integer' do
-      expect { subject.posts_counter }.not_to raise_error
-    end
-    it 'should display most recent posts' do
-      expect(subject.most_recent_posts).to eq(subject.posts.last(3))
+
+    describe 'associations' do
+      it { should belong_to(:author).class_name(:User) }
+      it { should belong_to(:post) }
     end
   end
 end

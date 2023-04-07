@@ -154,25 +154,12 @@ To use this application, follow these steps:
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -190,8 +177,7 @@ Example:
 I'm full stack software developer, Computer science, and Microverse student.
 
 **Stack:** Python, JavaScript, Bootstrap, Ruby, Rails, React, Redux. Available for hire!
-## 🤝 **Contributing**
-Contributions, issues, and feature requests are welcome!
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -210,22 +196,6 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-- If you want to contribute to this project, please follow these steps:
-
-1.  Create a new branch with a descriptive name 
-```sh
- git checkout -b my-new-feature
-```
-2. Make changes to the code and commit them
-```sh
- git commit -am 'Add some feature'.
-```
- 
-3.  Push your changes to your fork
-```sh
- git push origin my-new-feature.
-```
-4. Create a new [pull request](https://github.com/Ridwanullahi-code/BlogApp/compare) and describe your changes.
 
 
 Contributions, issues, and feature requests are welcome!
