@@ -19,6 +19,8 @@ gem 'puma', '~> 5.0'
 
 gem 'shoulda-matchers', '~> 4.0'
 
+gem 'rails-controller-testing'
+
 gem 'rspec-rails'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
