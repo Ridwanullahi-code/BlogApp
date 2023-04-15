@@ -27,7 +27,7 @@ nav ul {
 .align {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px;  
 }
 
 .user-container {
