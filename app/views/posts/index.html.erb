@@ -1,1 +1,13 @@
-<h1> List all user's posts</h1>
+<section>
+	<%= render 'shared/user', user: @user %>
+	<% @posts.each do |post| %>
+	  <%= render 'shared/post', post: post %>
+		<% post.most_recent_comments.each do | comment | %>
+			<% @user = User.find(comment.author_id) %>
+			<p><%= @user["name"] %>: <span><%= comment.text %></span></p>
+		<% end %>
+	<% end %>
+	<%= content_tag :div, class: "will-paginate-container" do %>
+	<%= will_paginate @posts %>
+	<% end %>	
+</section>

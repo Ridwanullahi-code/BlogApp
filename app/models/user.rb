@@ -7,6 +7,10 @@ class User < ApplicationRecord
   after_save :most_recent_posts
 
   def most_recent_posts
-    posts.order(created_at: :desc).includes(:user).limit(3)
+    posts.where(author: self).order(created_at: :desc).limit(3)
+  end
+
+  def posts_counter
+    posts.count
   end
 end
