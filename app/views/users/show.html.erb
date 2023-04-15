@@ -1,12 +1,15 @@
 <section class="align">
 	<%= render 'shared/user', user: @user %>
 	<div class="align">
-		<p><%= @user.bio %></p>
+		<div class="border">
+			<h2>Bio</h2>
+			<p class="bio"><%= @user.bio %></p>
+		</div>
 		<% @user.most_recent_posts.each do |post| %>
 		 <%= render 'shared/post', post:post %>
 		<%end %>
 	</div>
-	<div>
+	<div class="center">
 		<button><%= link_to "see all posts", user_posts_path(@user) %></button>
 	</div>
 </section>

@@ -4,11 +4,11 @@
   margin: 0;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
 }
 
 body {
-  width: 100%;
-  height: 100vh;
+  padding: 0 100px;
 }
 
 .align {
@@ -37,4 +37,40 @@ body {
 .total-post {
   text-align: right;
   margin: 20px 0;
+}
+
+.border {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pg {
+  margin: 10px 0;
+}
+
+.gap {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.post-comment {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
