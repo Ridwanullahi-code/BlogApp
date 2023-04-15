@@ -179,8 +179,7 @@ Feel free to check the [issues page](https://github.com/Ridwanullahi-code/BlogAp
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
-If you like this project...
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

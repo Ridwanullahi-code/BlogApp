@@ -15,7 +15,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(author_id: params[:post][:user_id], title: params[:post][:title], text: params[:post][:text].gsub(/\r\n?/, '<br>'))
+    @post = Post.create(author_id: params[:post][:user_id], title: params[:post][:title],
+                        text: params[:post][:text].gsub(/\r\n?/, '<br>'))
 
     if @post.save
       redirect_to user_path(params[:post][:user_id]), notice: 'Post was successfully created.'

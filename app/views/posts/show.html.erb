@@ -1,14 +1,18 @@
 <section>
-	<div>
-		<h3><%= content_tag :span, "Post # #{@post.id} by #{@post.author.name}" %></h3>
-		<%= content_tag :span, "Comments: #{@post.comments_counter}, Likes: #{@post.likes_counter}" %>
+	<div class="border">
+		<div class="flex">
+			<h3><%= content_tag :span, "Post # #{@post.id} by #{@post.author.name}" %></h3>
+			<%= content_tag :span, "Comments: #{@post.comments_counter}, Likes: #{@post.likes_counter}" %>
+		</div>
 	</div>
 	<div>
 		<%= content_tag :div, class: "post-likes" do %>
 		<%= button_to "🖤 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
 		<% end %>
+	
+	<div class="container border">
 		<h2><%= @post.title%></h2>
-		<p><%= @post.text %></p>
+		<p class="title-bio"><%= @post.text %></p>
 		<ul>
 			<h3>💬 Comments:</h3>
 			<% @post.comments.each do|comment|%>
