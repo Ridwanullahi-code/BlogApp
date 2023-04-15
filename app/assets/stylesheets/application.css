@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  list-style: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,7 +11,19 @@ body {
   width: 100%;
   height: 100vh;
 }
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   border:1px solid gray;
+   padding:10px 30px;
+}
 
+nav ul {
+  display:flex;
+  gap:20px
+
+}
 .align {
   display: flex;
   flex-direction: column;
@@ -37,4 +50,11 @@ body {
 .total-post {
   text-align: right;
   margin: 20px 0;
+}
+
+.new_post{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
 }

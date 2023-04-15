@@ -1,15 +1,22 @@
 <section>
 	<div>
-		<h3><%= content_tag :span, "Post # #{@post.id} by #{@user.name}" %></h3>
+		<h3><%= content_tag :span, "Post # #{@post.id} by #{@post.author.name}" %></h3>
 		<%= content_tag :span, "Comments: #{@post.comments_counter}, Likes: #{@post.likes_counter}" %>
 	</div>
 	<div>
+		<%= content_tag :div, class: "post-likes" do %>
+		<%= button_to "🖤 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
+		<% end %>
 		<h2><%= @post.title%></h2>
 		<p><%= @post.text %></p>
 		<ul>
+			<h3>💬 Comments:</h3>
 			<% @post.comments.each do|comment|%>
 				<li><%= content_tag :span, "#{comment.author.name}: #{comment.text}" %></li>
 			<%end%>
 		</ul>
 	</div>
+	<%= content_tag :div, class: "post-comments" do %>
+	<%= render "comments/create", locals: { post_id: @post_id, comment: @comment } %>
+	<% end %>
 </section>
