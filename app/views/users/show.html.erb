@@ -1,6 +1,6 @@
-<section>
+<section class="align">
 	<%= render 'shared/user', user: @user %>
-	<div>
+	<div class="align">
 		<p><%= @user.bio %></p>
 		<% @user.most_recent_posts.each do |post| %>
 		 <%= render 'shared/post', post:post %>
