@@ -13,8 +13,8 @@
 }
 
 .digg_pagination .disabled {
-  color: #999999;
-  border: 1px solid #dddddd;
+  color: #999;
+  border: 1px solid #ddd;
 }
 
 .digg_pagination .current {
@@ -33,8 +33,8 @@
 
 .digg_pagination a:hover,
 .digg_pagination a:focus {
-  color: #000033;
-  border-color: #000033;
+  color: #003;
+  border-color: #003;
 }
 
 .digg_pagination .page_info {
@@ -47,12 +47,12 @@
 }
 
 .digg_pagination .page_info b {
-  color: #000033;
+  color: #003;
   background: #6aa6ed;
   padding: 0.1em 0.25em;
 }
 
-.digg_pagination:after {
+.digg_pagination::after {
   content: ".";
   display: block;
   height: 0;
@@ -64,6 +64,6 @@
   height: 1%;
 }
 
-*:first-child+html .digg_pagination {
+*:first-child + html .digg_pagination {
   overflow: hidden;
 }
