@@ -10,7 +10,6 @@ RSpec.feature 'PostIndex', type: :feature do
     visit user_posts_path(@user)
   end
 
-
   it 'displays the author name' do
     expect(page).to have_content('Fatima')
   end
