@@ -5,7 +5,9 @@ RSpec.feature 'PostIndex', type: :feature do
     User.create(
       name: 'Micheal',
       photo: 'https://picsum.photos/300/200',
-      bio: 'CEO Nairobi Hub', posts_counter: 1
+      bio: 'CEO Nairobi Hub', posts_counter: 1,
+      email: 'life@example.com',
+      password: 'micheal1234'
     )
   end
 
@@ -16,7 +18,22 @@ RSpec.feature 'PostIndex', type: :feature do
   let!(:comment2) { Comment.create(author: user, post:, text: 'Very Intresting') }
 
   before do
-    visit user_posts_path(user, post)
+    # Visit the login page
+    visit user_session_path
+
+    # Fill in the login form with username and password
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+
+    # Click the login button
+    click_button 'Log in'
+    expect(page).to have_current_path root_path
+
+    click_link user.name
+    expect(page).to have_current_path user_path(user)
+
+    click_link post.title
+    visit user_post_path(user, post)
   end
 
   it 'displays post author name' do

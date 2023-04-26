@@ -4,10 +4,28 @@ require 'capybara/rspec'
 RSpec.feature 'PostIndex', type: :feature do
   before(:each) do
     @user = User.create(name: 'Fatima', photo: 'https://picsum.photos/300/200', bio: 'CEO Nairobi Hub',
-                        posts_counter: 2)
+                        posts_counter: 2, email: 'nobe@gmail.com', password: 'fatima234')
     @post1 = @user.posts.create(title: 'Post 1', text: 'Life of single man', comments_counter: 2, likes_counter: 3)
     @post2 = @user.posts.create(title: 'Post 2', text: 'Man need money', comments_counter: 2, likes_counter: 5)
-    visit user_posts_path(@user)
+
+    # Visit the login page
+    visit user_session_path
+
+    # Fill in the login form with username and password
+    fill_in 'Email', with: @user.email
+    fill_in 'Password', with: @user.password
+
+    # Click the login button
+    click_button 'Log in'
+    expect(page).to have_current_path root_path
+
+    click_link @user.name
+    expect(page).to have_current_path user_path(@user)
+
+    @user.posts.each do |post|
+      click_link post.title
+      visit user_posts_path(@user)
+    end
   end
 
   it 'displays the author name' do
