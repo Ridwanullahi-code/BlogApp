@@ -1,7 +1,7 @@
 <header class="flex justify-between items-center bg-white border border-gray-200 py-3 px-7">
     <h1 class="text-blue-500 font-bold text-2xl"><%= link_to "Blog App", users_path, class:"hover:bg-blue-800 duration-90 border-blue-700 p-2 px-4 rounded-sm hover:text-white" %></h1>
       <ul class="flex gap-10 items-center">
-        <li><%=  link_to "Home", users_path, class: "hover:bg-blue-800 duration-90 bg-blue-700 border-blue-700 p-2 px-4 text-white rounded-sm" %></li>
-        <%# <><%= button_to "Create Post", new_user_post_path(current_user), class: "hover:bg-blue-800 duration-90 bg-blue-700 border-blue-700 p-2 px-4 text-white rounded-sm" %>
+        <li><%=  button_to "Logout",destroy_user_session_path ,method: :delete, class: "hover:bg-blue-800 duration-90 bg-blue-700 border-blue-700 p-2 px-4 text-white rounded-sm" %></li>
+        <li><%= link_to "Create Post", new_user_post_path(current_user), class: "hover:bg-blue-800 duration-90 bg-blue-700 border-blue-700 p-2 px-4 text-white rounded-sm" %> </li>
       </ul>
 </header>
