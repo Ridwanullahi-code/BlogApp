@@ -9,7 +9,7 @@ class Ability
     return unless user.present?
 
     case user.role?
-    when 'admin'
+    when 'Admin'
       can :manage, :all
     else
       can :destroy, Post, author: user
