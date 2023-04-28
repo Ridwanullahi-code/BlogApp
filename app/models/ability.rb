@@ -12,8 +12,11 @@ class Ability
     when 'Admin'
       can :manage, :all
     else
-      can :destroy, Post, author: user
-      can :destroy, Comment, author: user
+      can :manage, Post, author: user
+      if Post.author == user
+        can :manage, Comment, author: user
+        can :read, :all
+      end
     end
 
     #
