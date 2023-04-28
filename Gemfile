@@ -21,6 +21,7 @@ gem 'shoulda-matchers', '~> 4.0'
 
 gem 'rails-controller-testing'
 
+gem 'cancancan'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 

@@ -25,4 +25,16 @@ class PostsController < ApplicationController
       flash.alert = 'Error!, Post not added!'
     end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    authorize! :destroy, @post
+    if @post.destroy
+      flash[:sucess] = 'post was successfully deleted'
+      redirect_to user_posts_path(@post.author)
+    else
+      flash[:error] = 'Failed to delete post'
+      redirect_to user_post_path(@post)
+    end
+  end
 end
