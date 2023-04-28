@@ -17,8 +17,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(author_id: params[:post][:user_id], title: params[:post][:title],
-                        text: params[:post][:text].gsub(/\r\n?/, '<br>'))
+    @post = Post.create(author_id: params[:post][:user_id], title:
+       params[:post][:title], text: params[:post][:text].gsub(/\r\n?/, '<br>'))
 
     if @post.save
       redirect_to user_path(params[:post][:user_id]), notice: 'Post was successfully created.'
@@ -38,5 +38,11 @@ class PostsController < ApplicationController
       flash[:error] = 'Failed to delete post'
       redirect_to user_post_path(@post)
     end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:author_id, :title, :text)
   end
 end

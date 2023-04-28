@@ -8,15 +8,12 @@ class Ability
     #   can :read, :all
     return unless user.present?
 
-    case user.role?
-    when 'Admin'
+    if user.role == 'Admin'
       can :manage, :all
     else
       can :manage, Post, author: user
-      if Post.author == user
-        can :manage, Comment, author: user
-        can :read, :all
-      end
+      can :manage, Comment, author: user
+      can :read, :all
     end
 
     #
