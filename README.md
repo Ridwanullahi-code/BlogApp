@@ -1,13 +1,3 @@
-<a name="readme-top"></a>
-
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -70,16 +60,6 @@
 - Book Search: Users can search for books by title or author. The application integrates with the Google Books API to fetch data about books, including their cover image, title, author, and description.
 
 - Book Details: Users can view the details of a book, including its cover image, title, author, and description. They can also see other users' reviews for the book.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
