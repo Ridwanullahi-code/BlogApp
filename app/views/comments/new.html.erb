@@ -1,0 +1,6 @@
+<%= content_tag :div, class: "post-comments" do %>
+	<%= form_with(model: @comment, url: user_post_comments_path(post_id: params[:post_id])) do |form| %>
+	<%= form.text_area :text, hide_label: true, placeholder: "Leave a comment...", required: true %>
+	<%= form.submit "Add comment" %>
+	<% end %>
+<% end %>
