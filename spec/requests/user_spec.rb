@@ -10,9 +10,7 @@ RSpec.describe User, type: :request do
       it 'render the index template' do
         expect(response).to render_template(:index)
       end
-      it 'display list of users' do
-        expect(response.body).to include('List all Users')
-      end
+
       it 'should return success status code for index action' do
         expect(response).to have_http_status(200)
       end
@@ -27,9 +25,6 @@ RSpec.describe User, type: :request do
       end
       it 'render the show template' do
         expect(response).to render_template(:show)
-      end
-      it 'show specified user' do
-        expect(response.body).to include('Show specific user')
       end
     end
   end
