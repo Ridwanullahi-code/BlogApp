@@ -8,16 +8,9 @@ RSpec.feature 'UsersIndices', type: :feature do
     visit users_path
   end
 
-  def image_exists?(url)
-    response = Net::HTTP.get_response(URI.parse(url))
-    response.code == '200'
-  rescue StandardError
-    false
-  end
-
   it 'displays the user name and profile image, and total posts on the index page' do
     expect(page).to have_content(user.name)
-    expect(image_exists?(user.photo)).to be true
+    expect(page.has_xpath?("//img[@src='#{user.photo}']")).to be true
     expect(page).to have_content("Number of posts: #{user.posts_counter}")
   end
 
