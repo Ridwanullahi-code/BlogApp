@@ -145,6 +145,12 @@ Example command:
 - Github: [Ridwan](https://github.com/Ridwanullahi-code)
 - LinkedIn: [Ridwan](https://www.linkedin.com/in/ajayi-ridwan/)
 
+## **Author1**
+
+- GitHub: [@monicah79](https://github.com/monicah79)
+- Twitter: [@MonicahWanjema](https://twitter.com/MonicaWanjema)
+- LinkedIn: [monicah-wanjema](https://www.linkedin.com/in/monicah-wanjema/)
+
 ## 🚀 **About Me**
 
 I'm full stack software developer, Computer science, and Microverse student.
