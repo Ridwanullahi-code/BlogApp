@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'capybara/rspec'
 
 RSpec.feature 'PostIndex', type: :feature do
   let!(:user) do
