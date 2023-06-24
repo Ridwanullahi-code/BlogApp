@@ -6,8 +6,13 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
 
   def create
     request_body = JSON.parse(request.body.read)
-    comment = Comment.new(author_id: current_user.id, post_id: params.require(:post_id), text: request_body['comment'])
-    render json: comment
+    comment = Comment.new(author_id: current_user, post_id: params.require(:post_id), text: request_body['comment'])
+
+    if comment.save
+      render json: comment, status: :created
+    else
+      render json: comment.errors, status: :unprocessable_entity
+    end
   end
 
   private
