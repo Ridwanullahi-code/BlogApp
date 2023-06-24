@@ -15,7 +15,7 @@ RSpec.describe User, type: :model do
     it 'test posts_counter not to less than zero' do
       expect(subject.posts_counter).not_to eq(0)
     end
-    it 'test post_counter value must be 5' do
+    it 'test post_counter value must be 5 line' do
       expect(subject.posts_counter).to eq(5)
     end
     it 'Raises a TypeError if posts_counter is not an integer' do
