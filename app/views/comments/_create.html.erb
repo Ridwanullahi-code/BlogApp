@@ -1,0 +1,6 @@
+<%= form_with(model: [ @post, Comment.new ], url: user_post_comments_path(user_id: current_user.id, post_id: @post.id), local: true ) do |form| %>
+<div class="flex flex-col gap-3  w-full px-10 md:px-80">
+	<%= form.text_area :text, hide_label: true, placeholder: "Leave a comment...", class:"border border-gray-100 h-48", required: true %>
+	<%= form.submit "Add comment" , class:"text-white bg-blue-700 hover:bg-blue-800 active:bg-blue-900 p-3 px-5 rounded-sm w-40"%>
+</div>
+<% end %>

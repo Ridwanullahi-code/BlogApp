@@ -1,4 +1,5 @@
-<section class="align">
+<%= render "shared/header" %>
+<section class="border border-gray-200 flex flex-col gap-3 mx-2 p-3">
 	<% @users.each do |user| %>
 	<%= render 'shared/user', user:user %>
 	<% end %>

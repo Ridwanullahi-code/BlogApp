@@ -4,7 +4,7 @@ default: &default
   encoding: unicode
   username: postgres
   password: ridwan
-  
+
 development:
   <<: *default
   database: BookApp_development
