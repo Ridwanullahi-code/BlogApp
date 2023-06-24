@@ -3,7 +3,6 @@ class Ability
 
   def initialize(user)
     # Define abilities for the user here. For example:
-    #
     #   return unless user.present?
     #   can :read, :all
     return unless user.present?
