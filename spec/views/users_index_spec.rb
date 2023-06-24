@@ -16,7 +16,6 @@ RSpec.feature 'UsersIndices', type: :feature do
     fill_in 'Email', with: @users.first.email
     fill_in 'Password', with: @users.first.password
 
-
     click_button 'Log in'
     expect(page).to have_current_path root_path
   end
