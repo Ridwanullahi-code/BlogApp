@@ -25,9 +25,7 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-  private
-
   def update_author_posts_counter
-    author.update(posts_counter: author.posts.count)
+    author.update!(posts_counter: author.posts.count)
   end
 end

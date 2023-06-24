@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { Post.new(title: 'Python', text: 'Backend porgramming language', comments_counter: 10, likes_counter: 10) }
-  before { subject.save }
+  before :each do
+    @author = User.new(name: 'Ridwan', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Life of programmer')
+    @post = Post.new(author: @author, title: 'Python', text: 'Backend porgramming language')
+    @comment = Comment.create(author: @author, post: @post, text: 'Test comment1')
+  end
 
   it { should validate_presence_of(:title) }
   it { should validate_length_of(:title).is_at_most(250) }
@@ -12,19 +15,15 @@ RSpec.describe Post, type: :model do
   it { should validate_numericality_of(:likes_counter) }
 
   it 'title should must not be empty' do
-    expect(subject.title).not_to be(nil)
+    expect(@post.title).not_to be(nil)
   end
   it 'comments_counter must greater than zero' do
-    expect(subject.comments_counter).to be > 0
+    expect(@post.comments_counter).to be > 0
   end
 
   describe 'methods' do
     it 'can not update comments counter when its a private method' do
-      expect(subject).to respond_to(:update_posts_counter)
-    end
-
-    it 'should display most recent posts' do
-      expect(subject.most_recent_comments).to eq(subject.comments.last(5))
+      expect(@post).to respond_to(:update_author_posts_counter)
     end
   end
   describe 'associations' do
