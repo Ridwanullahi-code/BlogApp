@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:likes, :comments).paginate(page: params[:page], per_page: 2)
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @posts }
     end
   end
